@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/AddProduct.css">
+
+    <!--boxicons-->
+    
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <title>Add a product</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="headertext">
+             <span class="maintext">Product List</span>
+              <div class="addremoveplace">
+                <button id="N">SAVE</button>
+                <input type="button" class="delete-products" id="delete-product-btn" value="Cancel">          
+              </div>
+        </div>
+    </header>
+    
+
+
+
+    <section>
+
+        <form id="Product-Form">
+            <label id="sku">SKU</label>
+            <input type="text" id="productsku" value=""><br>
+
+            <label>Name</label>          
+            <input type="text" id="productname" value=""><br>
+
+            <label>Price ($)</label>          
+            <input type="number" id="productprice" value=""><br>
+        </form>
+
+
+
+
+        <div id="ProductType">
+
+            <label for="cars">Type Switcher</label>
+
+              <select id="cars" onchange="MakeThemVisible(this.value)">
+                <option value="o">Select</option>
+                <option value="a">DVD</option>
+                <option value="b">Furniture</option>
+                <option value="c">Book</option>
+              </select>
+        
+            <!--ID of DVD-->
+              <div id="DVD">
+                <label>Size (MB)</label>
+                <input type="number" id="size" value="Please, provide size">
+              </div>
+
+            <!--ID of Furniture-->
+              <div id="Furniture">
+                <label>Height (CM)</label>
+                <input type="number" id="height" value="Please, provide dimensions"><br>
+
+                <label>Width (CM)</label>
+                <input type="number" id="width" value="Please, provide dimensions"><br>
+
+                <label>Lenght (CM)</label>
+                <input type="number" id="lenght" value="Please, provide dimensions">
+              </div>
+
+            <!--ID of Book-->
+              <div id="Book">
+                <label>Weight (KG)</label>
+                <input type="number" id="Weight" value="Please, provide weight">
+              </div>
+
+        
+            </div>
+
+        
+    </section>
+
+    <footer>
+        <p>Scandiweb Test Assigment</p>
+    </footer>
+    
+</body>
+<!--JS-->
+<script src="/javascript/Scandiweb.js"></script>
+</html>
